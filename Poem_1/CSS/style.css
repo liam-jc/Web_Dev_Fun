@@ -1,0 +1,389 @@
+    /*styles*/
+    body {
+        /*background-image: linear-gradient(lightgreen, skyblue);*/
+        /*background-color: skyblue;*/
+        margin: 0;
+        /*font-family: 'Anonymous Pro', monospace;font-size: 15px;*/
+        font-family: 'VT323', monospace;
+    }
+
+    a {
+        color: inherit !important;
+        text-decoration: none !important;
+    }
+
+    /* h1 {
+      margin-top: 0;
+    }*/
+    h3 {
+        color: black;
+    }
+
+    /*classes*/
+
+    .aliens {
+        background-image: linear-gradient(red, skyblue);
+        /*background-color: cornflowerblue;*/
+        text-align: center;
+        width: 30%;
+        height: 200px;
+        /*margin-left:  0;*/
+        border: solid 10px;
+        position: absolute;
+        left: 33%;
+        top: 440px;
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-delay: 0s;
+        transition-timing-function: ease-out;
+        /*position:  relative;
+        padding:  60px;
+        bottom:  300px;
+        margin-left: auto;
+        margin-right: auto;*/
+    }
+
+    .aliens:hover {
+        border: solid 10px;
+        border-top: solid 70px;
+        border-bottom: solid 50px;
+        /*left: 33%;*/
+        top: 330px;
+        border-color: blue;
+    }
+
+    .aliens-text {
+        margin: 20 auto 0 auto;
+        color: white;
+        /*font-weight: normal;*/
+    }
+
+    .black-lines {
+        width: 20%;
+        height: 20%;
+        position: absolute;
+        right: 50px;
+        top: 240px;
+    }
+
+    .cell {
+        border-radius: 50%;
+        /*makes an ellipse*/
+        width: 15%;
+        height: 200px;
+        background-image: linear-gradient(lightcoral, coral);
+        /*background-color: lightcoral;*/
+        border: dashed 2px;
+        border-color: white;
+        position: relative;
+        bottom: 400px;
+        left: 5%;
+        display: inline-block;
+        transition-property: all;
+        transition-duration: 0.2s;
+        transition-delay: 0s;
+        transition-timing-function: ease-out;
+    }
+
+    .cell:hover {
+        width: 17%;
+        height: 180px;
+        left: 4%;
+        bottom: 390px;
+    }
+
+    .cell-graph {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cell-text {
+        text-align: center;
+        /*position: relative;*/
+        margin: 50px auto 0 auto;
+        color: white;
+        font-size: 1em;
+        z-index: 90;
+    }
+
+    .centered {
+        margin: auto;
+    }
+
+    .fumes {
+        font-family: 'Libre Baskerville', serif;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        margin-left: 90px;
+        text-align: right;
+    }
+
+    .text1 {
+        /*width:  50%;*/
+        font-family: 'Libre Baskerville', serif;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        margin-left: 90px;
+        text-align: right;
+        opacity: 0%;
+        animation-name: textAnimation1;
+        /*animation-duration: 8s;*/
+        animation-duration: 40s;
+        /*animation-iteration-count: 1;*/
+        /*animation-delay: 2s;*/
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+
+    .text2 {
+        font-family: 'Libre Baskerville', serif;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        margin-left: 90px;
+        text-align: right;
+        opacity: 0%;
+        animation-name: textAnimation2;
+        /*animation-duration: 8s;*/
+        animation-duration: 40s;
+        /*animation-iteration-count: 1;*/
+        /*animation-delay: 10s;*/
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+
+    .text3 {
+        font-family: 'Libre Baskerville', serif;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        margin-left: 90px;
+        text-align: right;
+        opacity: 0%;
+        animation-name: textAnimation3;
+        /*animation-duration: 8s;*/
+        animation-duration: 40s;
+        /*animation-iteration-count: 1;*/
+        /*animation-delay: 18s;*/
+        animation-timing-function: ease-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+    }
+
+    .green-line {
+        width: 40%;
+        height: 40%;
+        position: absolute;
+        right: 50px;
+        top: 200px;
+    }
+
+    .hamburger {
+        /*background-image:  url("hamburger.png");*/
+        /*background-color: #cccccc;*/
+        height: 50px;
+        width: 50px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: fixed;
+        margin: 2px;
+        z-index: 100;
+    }
+
+    .hero-photo {
+        /*background-image:  url("microorganism.jpg");*/
+        /*background-color: lightgreen;*/
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .top-container cookie {}
+
+    .welcome-text {
+        background-color: antiquewhite;
+        margin-left: 0;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .wiggling {
+        font-family: 'Libre Baskerville', serif;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        margin-left: 90px;
+        text-align: right;
+    }
+
+
+
+    /*IDs*/
+
+    /*text animations*/
+    @keyframes textAnimation1 {
+        0% {
+            opacity: 0%;
+            /*transform: rotateX(90deg);*/
+        }
+
+        10% {
+            opacity: 0%;
+            /*transform: rotateX(90deg);*/
+        }
+
+        20% {
+            opacity: 100%;
+            /*transform: rotateY(0);*/
+        }
+
+        30% {
+            opacity: 100%;
+            /*transform: rotateY(0);*/
+        }
+
+        35% {
+            opacity: 0%;
+            /*transform: rotateY(90deg);*/
+        }
+
+        100% {
+            opacity: 0%;
+            /*transform: rotateY(90deg);*/
+        }
+    }
+    @keyframes textAnimation2 {
+        0% {
+            opacity: 0%;
+        }
+
+        35% {
+            opacity: 0%;
+        }
+
+        40% {
+            opacity: 100%;
+        }
+
+        50% {
+            opacity: 100%;
+        }
+
+        55% {
+            opacity: 0%;
+        }
+
+        100% {
+            opacity: 0%;
+        }
+    }
+    @keyframes textAnimation3 {
+        0% {
+            opacity: 0%;
+            color:  black;
+        }
+
+        55% {
+            opacity: 0%;
+            color:  black;
+        }
+
+        60% {
+            opacity: 100%;
+            color:  black;
+        }
+
+        73% {
+            opacity: 100%;
+            color:  black;
+        }
+
+        75% {
+            opacity: 100%;
+            color:  green;
+        }
+
+        80% {
+            opacity: 0%;
+            color:  green;
+        }
+
+        100% {
+            opacity: 0%;
+            color:  green;
+        }
+    }
+
+    /*@keyframes textAnimationStay {
+        0% {
+            opacity: 0%;
+        }
+
+        20% {
+            opacity: 100%;
+        }
+
+        80% {
+            opacity: 100%;
+        }
+
+        100% {
+            opacity: 100%;
+        }
+    }*/
+
+    /*fade in loader*/
+    @keyframes fadeinall {
+        0% {
+            opacity: 1;
+        }
+
+        97% {
+            opacity: 0;
+        }
+
+        98% {
+            opacity: 0;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        99% {
+            opacity: 0;
+            -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+        }
+
+        100% {
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+
+
+    #loader {
+        opacity: 1;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+        transform: translateY(0);
+        background-color: black;
+        z-index: 999;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation: fadeinall 5s normal both;
+        animation: fadeinall 5s normal both;
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s;
+    }
+
+    /*fade in loader end*/
