@@ -155,17 +155,6 @@
         top: 200px;
     }
 
-    .hamburger {
-        height: 50px;
-        width: 50px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: fixed;
-        margin: 2px;
-        z-index: 100;
-    }
-
     .hero-photo {
         height: 500px;
         background-position: center;
