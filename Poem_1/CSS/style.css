@@ -1,341 +1,326 @@
-    /*styles*/
-    body {
-        margin: 0;
-        font-family: 'VT323', monospace;
-    }
+/*styles*/
+body {
+    /* background-image: linear-gradient(217deg, rgba(255,0,0,0.01), rgba(255,0,0,0) 70.71%),
+        linear-gradient(127deg, rgba(0,255,0,.14), rgba(0,255,0,0) 70.71%),
+        linear-gradient(336deg, rgba(0,0,255,.4), rgba(0,0,255,0) 70.71%); */
+    margin: 0;
+    font-family: 'VT323', monospace;
+}
 
-    a {
-        color: inherit !important;
-        text-decoration: none !important;
-    }
+a {
+    color: inherit !important;
+    text-decoration: none !important;
+}
 
-    h3 {
-        color: black;
-    }
+h3 {
+    color: black;
+}
 
-    /*classes*/
+/*classes*/
+.synthetic {
+    background-image: linear-gradient(red, skyblue);
+    text-align: center;
+    width: 30%;
+    height: 200px;
+    border: solid 10px;
+    position: absolute;
+    left: 33%;
+    top: 440px;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-delay: 0s;
+    transition-timing-function: ease-out;
+}
 
-    .aliens {
-        background-image: linear-gradient(red, skyblue);
-        text-align: center;
-        width: 30%;
-        height: 200px;
-        border: solid 10px;
-        position: absolute;
-        left: 33%;
-        top: 440px;
-        transition-property: all;
-        transition-duration: 0.2s;
-        transition-delay: 0s;
-        transition-timing-function: ease-out;
-    }
+.synthetic:hover {
+    border: solid 10px;
+    border-top: solid 70px;
+    border-bottom: solid 50px;
+    top: 330px;
+    border-color: blue;
+}
 
-    .aliens:hover {
-        border: solid 10px;
-        border-top: solid 70px;
-        border-bottom: solid 50px;
-        top: 330px;
-        border-color: blue;
-    }
+.synthetic-text {
+    margin: 20 auto 0 auto;
+    color: white;
+}
 
-    .aliens-text {
-        margin: 20 auto 0 auto;
-        color: white;
-    }
+.black-lines {
+    width: 20%;
+    position: absolute;
+    right: 50px;
+    top: 240px;
+}
 
-    .black-lines {
-        width: 20%;
-        height: 20%;
-        position: absolute;
-        right: 50px;
-        top: 240px;
-    }
+.cell {
+    border-radius: 50%;
+    /*makes an ellipse*/
+    width: 15%;
+    height: 200px;
+    background-image: linear-gradient(lightcoral, coral);
+    border: dashed 2px;
+    border-color: white;
+    position: relative;
+    top: 140px;
+    left: 5%;
+    display: inline-block;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-delay: 0s;
+    transition-timing-function: ease-out;
+}
 
-    .cell {
-        border-radius: 50%;
-        /*makes an ellipse*/
-        width: 15%;
-        height: 200px;
-        background-image: linear-gradient(lightcoral, coral);
-        border: dashed 2px;
-        border-color: white;
-        position: relative;
-        bottom: 400px;
-        left: 5%;
-        display: inline-block;
-        transition-property: all;
-        transition-duration: 0.2s;
-        transition-delay: 0s;
-        transition-timing-function: ease-out;
-    }
+.cell:hover {
+    width: 17%;
+    height: 180px;
+    left: 4%;
+    bottom: 390px;
+}
 
-    .cell:hover {
-        width: 17%;
-        height: 180px;
-        left: 4%;
-        bottom: 390px;
-    }
+.cell-graph {
+    width: 100px;
+    height: 100px;
+}
 
-    .cell-graph {
-        width: 100px;
-        height: 100px;
-    }
+.cell-text {
+    text-align: center;
+    margin: 50px auto 0 auto;
+    color: white;
+    font-size: 1em;
+    z-index: 90;
+}
 
-    .cell-text {
-        text-align: center;
-        margin: 50px auto 0 auto;
-        color: white;
-        font-size: 1em;
-        z-index: 90;
-    }
+.centered {
+    margin: auto;
+}
 
-    .centered {
-        margin: auto;
-    }
+.fumes {
+    font-family: 'Libre Baskerville', serif;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    margin-left: 90px;
+    text-align: right;
+}
 
-    .fumes {
-        font-family: 'Libre Baskerville', serif;
-        position: absolute;
-        top: 50px;
-        right: 20px;
-        margin-left: 90px;
-        text-align: right;
-    }
+.text1 {
+    font-family: 'Libre Baskerville', serif;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    margin-left: 90px;
+    text-align: right;
+    opacity: 0%;
+    animation-name: textAnimation1;
+    animation-duration: 40s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
 
-    .text1 {
-        font-family: 'Libre Baskerville', serif;
-        position: absolute;
-        top: 30px;
-        right: 20px;
-        margin-left: 90px;
-        text-align: right;
-        opacity: 0%;
-        animation-name: textAnimation1;
-        animation-duration: 40s;
-        animation-timing-function: ease-out;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-    }
+.text2 {
+    font-family: 'Libre Baskerville', serif;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    margin-left: 90px;
+    text-align: right;
+    opacity: 0%;
+    animation-name: textAnimation2;
+    animation-duration: 40s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
 
-    .text2 {
-        font-family: 'Libre Baskerville', serif;
-        position: absolute;
-        top: 30px;
-        right: 20px;
-        margin-left: 90px;
-        text-align: right;
-        opacity: 0%;
-        animation-name: textAnimation2;
-        animation-duration: 40s;
-        animation-timing-function: ease-out;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-    }
+.text3 {
+    font-family: 'Libre Baskerville', serif;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    margin-left: 90px;
+    text-align: right;
+    opacity: 0%;
+    animation-name: textAnimation3;
+    animation-duration: 40s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
 
-    .text3 {
-        font-family: 'Libre Baskerville', serif;
-        position: absolute;
-        top: 30px;
-        right: 20px;
-        margin-left: 90px;
-        text-align: right;
-        opacity: 0%;
-        animation-name: textAnimation3;
-        animation-duration: 40s;
-        animation-timing-function: ease-out;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-    }
+.green-line {
+    width: 40%;
+    position: absolute;
+    right: 50px;
+    top: 200px;
+}
 
+.welcome-text {
+    background-color: antiquewhite;
+    margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+}
+
+.wiggling {
+    font-family: 'Libre Baskerville', serif;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    margin-left: 90px;
+    text-align: right;
+}
+
+@media (max-width: 500px) {
     .green-line {
+        width: 60%;
+        right: 10px;
+    }
+    .black-lines {
         width: 40%;
-        height: 40%;
-        position: absolute;
-        right: 50px;
-        top: 200px;
+        right: 10px;
+    }
+    .cell {
+        width: 25%;
+        height: 140px;
+    }
+    .cell:hover {
+        width: 27%;
+        height: 110px;
+    }
+}
+
+/*text animations*/
+@keyframes textAnimation1 {
+    0% {
+        opacity: 0%;
     }
 
-    .spacer {
-        height: 500px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
+    10% {
+        opacity: 0%;
     }
 
-    .top-container cookie {}
-
-    .welcome-text {
-        background-color: antiquewhite;
-        margin-left: 0;
-        margin-top: 0;
-        width: 100%;
+    20% {
+        opacity: 100%;
     }
 
-    .wiggling {
-        font-family: 'Libre Baskerville', serif;
-        position: absolute;
-        top: 40px;
-        right: 20px;
-        margin-left: 90px;
-        text-align: right;
+    30% {
+        opacity: 100%;
     }
 
-
-
-    /*IDs*/
-
-    /*text animations*/
-    @keyframes textAnimation1 {
-        0% {
-            opacity: 0%;
-        }
-
-        10% {
-            opacity: 0%;
-        }
-
-        20% {
-            opacity: 100%;
-        }
-
-        30% {
-            opacity: 100%;
-        }
-
-        35% {
-            opacity: 0%;
-        }
-
-        100% {
-            opacity: 0%;
-        }
-    }
-    @keyframes textAnimation2 {
-        0% {
-            opacity: 0%;
-        }
-
-        35% {
-            opacity: 0%;
-        }
-
-        40% {
-            opacity: 100%;
-        }
-
-        50% {
-            opacity: 100%;
-        }
-
-        55% {
-            opacity: 0%;
-        }
-
-        100% {
-            opacity: 0%;
-        }
-    }
-    @keyframes textAnimation3 {
-        0% {
-            opacity: 0%;
-            color:  black;
-        }
-
-        55% {
-            opacity: 0%;
-            color:  black;
-        }
-
-        60% {
-            opacity: 100%;
-            color:  black;
-        }
-
-        73% {
-            opacity: 100%;
-            color:  black;
-        }
-
-        75% {
-            opacity: 100%;
-            color:  green;
-        }
-
-        80% {
-            opacity: 0%;
-            color:  green;
-        }
-
-        100% {
-            opacity: 0%;
-            color:  green;
-        }
+    35% {
+        opacity: 0%;
     }
 
-    /*@keyframes textAnimationStay {
-        0% {
-            opacity: 0%;
-        }
-
-        20% {
-            opacity: 100%;
-        }
-
-        80% {
-            opacity: 100%;
-        }
-
-        100% {
-            opacity: 100%;
-        }
-    }*/
-
-    /*fade in loader*/
-    @keyframes fadeinall {
-        0% {
-            opacity: 1;
-        }
-
-        97% {
-            opacity: 0;
-        }
-
-        98% {
-            opacity: 0;
-            -webkit-transform: translateY(0);
-            transform: translateY(0);
-        }
-
-        99% {
-            opacity: 0;
-            -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
-        }
-
-        100% {
-            opacity: 0;
-            z-index: -1;
-        }
+    100% {
+        opacity: 0%;
+    }
+}
+@keyframes textAnimation2 {
+    0% {
+        opacity: 0%;
     }
 
+    35% {
+        opacity: 0%;
+    }
 
-    #loader {
+    40% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    55% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+@keyframes textAnimation3 {
+    0% {
+        opacity: 0%;
+        color:  black;
+    }
+
+    55% {
+        opacity: 0%;
+        color:  black;
+    }
+
+    60% {
+        opacity: 100%;
+        color:  black;
+    }
+
+    73% {
+        opacity: 100%;
+        color:  black;
+    }
+
+    75% {
+        opacity: 100%;
+        color:  green;
+    }
+
+    80% {
+        opacity: 0%;
+        color:  green;
+    }
+
+    100% {
+        opacity: 0%;
+        color:  green;
+    }
+}
+
+/*fade in loader*/
+@keyframes fadeinall {
+    0% {
         opacity: 1;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-        transform: translateY(0);
-        background-color: black;
-        z-index: 999;
-        -webkit-animation-fill-mode: forwards;
-        animation-fill-mode: forwards;
-        -webkit-animation: fadeinall 5s normal both;
-        animation: fadeinall 5s normal both;
-        -webkit-animation-delay: 1s;
-        animation-delay: 1s;
     }
 
-    /*fade in loader end*/
+    97% {
+        opacity: 0;
+    }
+
+    98% {
+        opacity: 0;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    99% {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+#loader {
+    opacity: 1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    background-color: black;
+    z-index: 999;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation: fadeinall 5s normal both;
+    animation: fadeinall 5s normal both;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+/*fade in loader end*/
